@@ -1,8 +1,17 @@
 import java.util.Scanner;
 
 public class App {
-    public static void main(String[] args) throws Exception {
-   
+
+    private static double calcular(double num1, double num2, String operador) {
+        switch (operador){                 
+            case "+":
+                return num1 + num2;
+        default:
+            return 0;
+        }
+    }
+
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Digite o primeiro número: ");
@@ -16,13 +25,6 @@ public class App {
 
         double resultado = calcular(num1, num2, operador);
         System.out.println("Resultado: " + resultado);
+        
     }
-
-    
-    }
-
-
-    
-
-
-
+}
